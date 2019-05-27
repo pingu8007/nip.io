@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  pdns:
+    image: pdns
+    restart: always
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
